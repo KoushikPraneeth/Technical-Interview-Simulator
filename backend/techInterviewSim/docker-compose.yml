@@ -1,0 +1,27 @@
+services:
+  app:
+    build: .
+    ports:
+      - "8080:8080"
+    environment:
+      - SPRING_PROFILES_ACTIVE=dev
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://db.xcgwmkisrytmehosyali.supabase.co:5432/postgres
+      - SPRING_DATASOURCE_USERNAME=postgres
+      - SPRING_DATASOURCE_PASSWORD=${SUPABASE_DB_PASSWORD}
+      - JWT_SECRET=${JWT_SECRET:-TechInterviewSimulatorSecretKey123!@#ThisIsALongSecretKey}
+      - SUPABASE_PROJECT_URL=${SUPABASE_PROJECT_URL:-https://xcgwmkisrytmehosyali.supabase.co}
+      - SUPABASE_JWT_SECRET=${SUPABASE_JWT_SECRET}
+    volumes:
+      - ./target:/app/target
+    healthcheck:
+      test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost:8080/actuator/health"]
+      interval: 30s
+      timeout: 3s
+      retries: 3
+      start_period: 40s
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge

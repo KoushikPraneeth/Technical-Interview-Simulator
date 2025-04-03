@@ -1,0 +1,95 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+frontend/node_modules
+frontend/dist
+frontend/dist-ssr
+*.local
+frontend/.env
+frontend/supabase/config.toml
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+
+### Project-Specific Ignore ###
+backend/techInterviewSim/HELP.md
+backend/techInterviewSim/target/
+!backend/techInterviewSim/.mvn/wrapper/maven-wrapper.jar
+!backend/techInterviewSim/**/src/main/**/target/
+!backend/techInterviewSim/**/src/test/**/target/
+
+### STS ###
+backend/techInterviewSim/.apt_generated
+backend/techInterviewSim/.classpath
+backend/techInterviewSim/.factorypath
+backend/techInterviewSim/.project
+backend/techInterviewSim/.settings
+backend/techInterviewSim/.springBeans
+backend/techInterviewSim/.sts4-cache
+
+### IntelliJ IDEA ###
+backend/techInterviewSim/.idea
+backend/techInterviewSim/*.iws
+backend/techInterviewSim/*.iml
+backend/techInterviewSim/*.ipr
+
+### NetBeans ###
+backend/techInterviewSim/nbproject/private/
+backend/techInterviewSim/nbbuild/
+backend/techInterviewSim/dist/
+backend/techInterviewSim/nbdist/
+backend/techInterviewSim/.nb-gradle/
+backend/techInterviewSim/build/
+!backend/techInterviewSim/**/src/main/**/build/
+!backend/techInterviewSim/**/src/test/**/build/
+
+### VS Code ###
+backend/techInterviewSim/.vscode/
+
+### Environment Files ###
+backend/techInterviewSim/.env
+backend/techInterviewSim/.env.local
+backend/techInterviewSim/.env.*.local
+backend/techInterviewSim/.env.development
+backend/techInterviewSim/.env.test
+backend/techInterviewSim/.env.production
+backend/techInterviewSim/.env.simplified
+backend/techInterviewSim/.env.ssl
+backend/techInterviewSim/.env.h2
+backend/techInterviewSim/.env.fixed
+backend/techInterviewSim/.env.example
+backend/techInterviewSim/.env.new
+
+### Logs ###
+backend/techInterviewSim/*.log
+backend/techInterviewSim/logs/
+
+### Local Database ###
+backend/techInterviewSim/*.db
+backend/techInterviewSim/*.sqlite
+
+### Docker Volumes ###
+backend/techInterviewSim/docker/volumes/
+backend/techInterviewSim/postgres-data/
+backend/techInterviewSim/pgadmin-data/
+
+### Temporary Files ###
+backend/techInterviewSim/*.tmp
+backend/techInterviewSim/*.temp
+backend/techInterviewSim/*.swp
+backend/techInterviewSim/*.swo
